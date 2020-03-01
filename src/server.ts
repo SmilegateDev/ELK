@@ -32,6 +32,8 @@ class Server {
   private setRoutes() {
     this.router.use("/api", Container.get(Routes).getRoutes());
 
+    
+    
     this.app.use(this.router.routes());
     this.app.use(this.router.allowedMethods());
   }
